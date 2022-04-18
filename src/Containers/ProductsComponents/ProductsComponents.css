@@ -1,0 +1,18 @@
+.cardsProducts{
+    width:290px !important;
+    height: 480px !important;
+    text-align: center !important;
+}
+
+.productsImage{
+    width: 276px !important;
+    height: 300px !important;
+}
+
+.productsDesc{
+    font-size: 16px;
+}
+
+.ui .cards{
+    flex-wrap: nowrap !important;
+}

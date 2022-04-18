@@ -1,17 +1,13 @@
 import { Actions } from "../content/actions"
 
 const initionalState = {
-    product: [
-        {
-            
-        }
-    ]
+    product: []
 }
 
 export const prductReduser = (state = initionalState ,  { type , payload }) => {
    switch(type){
        case Actions.SET_PRODUCTS:
-           return state
+           return { ...state , product:payload }
          default:
            return state
    }
