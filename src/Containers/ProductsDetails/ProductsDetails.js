@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectedProduct } from '../../redux/actions/products';
+import { selectedProduct , romeveSelectedProduct } from '../../redux/actions/products';
 import '../ProductsDetails/ProducsDetails.css';
+import Loader from '../Loader/Loader';
 
 const Productsdetails = () => {
 
@@ -23,6 +24,10 @@ const Productsdetails = () => {
 
         if(productId && productId !== "") fetchProductsDetails()
 
+       return () => {
+           dispatch(romeveSelectedProduct())
+       }
+
     } , [productId])
 
 
@@ -30,7 +35,7 @@ const Productsdetails = () => {
         <>
           <div className='ui grid container'>
               {Object.keys(product).length === 0 ? (
-                  <div>loading</div>
+                  <Loader/>
               ) : (
                   <div className='ui placeholder segment'>
                       <div className='ui two column stackable center aligned grid'>
@@ -46,7 +51,7 @@ const Productsdetails = () => {
                                   </h2>
                                   <h3 className='ui brown block header'>{category}</h3>
                                   <p>{description}</p>
-                                  <div className='ui vertical animated button' tabIndex="0">
+                                  <div className='ui vertical productDetails animated button' tabIndex="0">
                                       <div className='hidden content'>
                                           <i className='shop icon'></i>
                                       </div>

@@ -1,0 +1,12 @@
+.loader{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 30% !important;
+    margin: 0 auto !important;
+}
+
+.loader .loaderGif{
+    text-align: center !important;
+    width: 340px !important;
+}
