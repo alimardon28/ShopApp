@@ -12,3 +12,12 @@ export const prductReduser = (state = initionalState ,  { type , payload }) => {
            return state
    }
 }
+
+export const selectedProductReducer = (state = initionalState ,  { type , payload }) => {
+  switch(type){
+    case Actions.SELECTED_PRODUCT:
+        return { ...state , ...payload }
+      default:
+        return state
+    }
+}

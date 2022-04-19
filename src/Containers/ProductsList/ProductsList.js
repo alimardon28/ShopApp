@@ -4,6 +4,7 @@ import axios from "axios";
 import { setProduct } from '../../redux/actions/products';
 import Productscomponents from '../ProductsComponents/ProductsComponents';
 import '../ProductsList/ProductsList.css';
+import banner from '../assets/img/banner.png';
 
 const Productslist = () => {
 
@@ -23,6 +24,7 @@ const Productslist = () => {
     return (
         <div className='ui grid container'>
             <div className='four column row productList'>
+              <img src={banner} alt="images" />
              <Productscomponents/>
             </div>
         </div>

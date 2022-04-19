@@ -1,0 +1,17 @@
+.logoImages{
+    width: 100px !important;
+}
+
+.content .shop{
+    font-size: 30px !important;
+}
+
+.ui.animated.button {
+    position: none;
+    overflow: hidden;
+    padding-right: 0;
+    z-index: 0;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding-top: 25px;
+}
